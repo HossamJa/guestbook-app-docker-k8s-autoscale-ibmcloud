@@ -61,7 +61,6 @@ cd guestbook-k8s-deployment
 ```bash
 docker build -t us.icr.io/YOUR_NAMESPACE/guestbook:v1 .
 docker push us.icr.io/YOUR_NAMESPACE/guestbook:v1
-Apply Kubernetes manifests:
 ```
 
 3. Apply Kubernetes manifests:
@@ -69,21 +68,18 @@ Apply Kubernetes manifests:
 ```bash
 kubectl apply -f manifests/deployment-v1.yaml
 kubectl apply -f manifests/service.yaml
-Enable autoscaling:
 ```
 
 4. Enable autoscaling:
 
 ```bash
 kubectl apply -f manifests/hpa.yaml
-Rollout v2:
 ```
 
 5. Rollout v2:
 
 ```bash
 kubectl apply -f manifests/deployment-v2.yaml
-Rollback if needed:
 ```
 
 6. Rollback if needed:
